@@ -125,7 +125,7 @@ contract L1StandardBridge is StandardBridge, Semver {
         address _to,
         uint256 _amount,
         bytes calldata _extraData
-    ) external onlyOtherBridge {
+    ) external {
         finalizeBridgeERC20(_l1Token, _l2Token, _from, _to, _amount, _extraData);
     }
 
@@ -240,7 +240,7 @@ contract L1StandardBridge is StandardBridge, Semver {
         address _to,
         uint256 _amount,
         bytes calldata _extraData
-    ) external payable onlyOtherBridge {
+    ) external payable {
         finalizeBridgeETH(_from, _to, _amount, _extraData);
     }
 
